@@ -111,7 +111,6 @@
 //   console.log("True");
 // }
 
-
 /* ==================== [3] Class syntax ========================================*/
 // (1) Class syntax
 // Constructor Function In JavaScript
@@ -169,7 +168,6 @@
 
 // console.log(User.countObjects());
 
-
 // (3) Inheritance
 // class User {
 //   constructor(name, email) {
@@ -222,7 +220,6 @@
 // console.log(user1.name);
 // console.log(user1.email);
 // console.log(user1.showInfo);
-
 
 /* ==================== [4] Object Meta Data ========================================*/
 /* Any property in object has attributes that can be changed like.
@@ -289,8 +286,44 @@
 // console.log(Object.getOwnPropertyNames(MyObject)); // To show all properties
 // console.log(Object.keys(MyObject)); // To show all properties can be used in for..in loop
 
+/* ==================== [5] Encapsulation ========================================*/
+/*
+  [1] Class Fields Are Public By Default.
+  [2] Guards The Data Against Illegal Access.
+  [3] Helps To Achieve The Target Without Revealing Its Complex Details.
+  [4] Will Reduce Human Errors.
+  [5] Make The App More Flexible And Manageable.
+  [6] Simplifies The App.
+*/
+// class User1 {
+//   #p;
+//   #e;
+//   constructor(id, username, password, eSalary) {
+//     this.i = id;
+//     this.u = username;
+//     this.#p = password;
+//     this.#e = eSalary;
+//   }
+//   editPassword() {
+//     return `hash ${this.#p}`;
+//   }
+//   getSalary() {
+//     return parseInt(this.#e);
+//   }
+// }
+// let user = new User1(1, "Mohamed", 12345, 5000);
+// console.log(user.getSalary() * 0.3);
 
-/* ==================== [5] The End ========================================*/
+// class User2 extends User1 {
+//   constructor(id, username, password, eSalary) {
+//     super(id, username, password, eSalary);
+//   }
+// }
+
+// let user2 = new User2(1, "Ahmed", 6789, 3000);
+// console.log(user2.getSalary() * 0.3);
+
+/* ==================== [6] The End ========================================*/
 /*
   Importants Notes
   [1] Arrow Fuction => Do Not Have a Prototype => Cannot be used as a constructor
