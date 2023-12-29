@@ -323,7 +323,95 @@
 // let user2 = new User2(1, "Ahmed", 6789, 3000);
 // console.log(user2.getSalary() * 0.3);
 
-/* ==================== [6] The End ========================================*/
+
+/* ==================== [6] Abstraction ========================================*/
+// function Employee(name, salary) {
+//   this.name = name;
+//   this.salary = salary;
+//   let bonas = 3000;
+//   let callFainalSalary = function() {
+//     console.log(salary + bonas);
+//   };
+//   this.displayInfo = function() {
+//     console.log(name)
+//     callFainalSalary()
+//   }
+// }
+// let emp1 = new Employee("Mohamed", 5000);
+// emp1.displayInfo();
+// console.log(emp1.bonas) // undefined
+
+// class Food {
+//   constructor(title) {
+//     this.title = title;
+//   }
+//   getCookingTime() {
+//     throw new Error("Method not implemented.");
+//   }
+// }
+// class Pizza extends Food {
+//   constructor(title, price) {
+//     super(title);
+//     this.price = price;
+//   }
+//   getCookingTime() {
+//     console.log("Cooking Pizza In 1 Hour");
+//   }
+// }
+// class Burger extends Food {
+//   constructor(title, price) {
+//     super(title);
+//     this.price = price;
+//   }
+//   getCookingTime() {
+//     console.log("Cooking Burger In Half Hour");
+//   }
+// }
+// // let FoodOne = new Food("Awesome banana", 100);
+// // FoodOne.getCookingTime(); // Error: Method not implemented.
+
+// let burgerOne = new Burger("Awesome Burger", 100);
+// console.log(burgerOne.title);
+// console.log(burgerOne.price);
+// burgerOne.getCookingTime();
+
+/* ==================== [6] Polymorphism ========================================*/
+// class Player {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   attack() {
+//     console.log("Attacking Now");
+//   }
+// }
+// class Amazon extends Player {
+//   constructor(name, spears) {
+//     super(name);
+//     this.spears = spears;
+//   }
+//   attack() {
+//     // super.attack();
+//     console.log("Attacking With Spear");
+//     this.spears -= 1;
+//   }
+// }
+// class Barbarian extends Player {
+//   constructor(name, axeDurability) {
+//     super(name);
+//     this.axeDurability = axeDurability;
+//   }
+//   attack() {
+//     // super.attack();
+//     console.log("Attacking With Axe");
+//     this.axeDurability -= 1;
+//   }
+// }
+// let barOne = new Barbarian("Elzero", 100);
+// console.log(barOne.name);
+// barOne.attack();
+// console.log(barOne.axeDurability);
+
+/* ==================== [8] The End ========================================*/
 /*
   Importants Notes
   [1] Arrow Fuction => Do Not Have a Prototype => Cannot be used as a constructor
